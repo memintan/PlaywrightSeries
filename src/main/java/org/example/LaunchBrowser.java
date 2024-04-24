@@ -1,14 +1,8 @@
-package testcases;
+package org.example;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.nio.file.Paths;
+import com.microsoft.playwright.*;
 
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserContext;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
+import java.awt.*;
 
 public class LaunchBrowser {
 
@@ -22,9 +16,7 @@ public class LaunchBrowser {
 
         Playwright playwright = Playwright.create();
 
-        Browser browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
-
-//        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setExecutablePath(Paths.get("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")));
+        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 //        Browser browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
 //        Browser browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 

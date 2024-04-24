@@ -19,5 +19,7 @@ public class MaximizingWindow {
 
         page.navigate("http://way2automation.com");
         System.out.println(page.title());
+        page.close();
+        playwright.close();
     }
 }
