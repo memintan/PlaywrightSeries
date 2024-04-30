@@ -19,5 +19,11 @@ public class HandlingWebTables {
         assertThat(page.locator(".dataTable > tbody").locator("tr:first-child").locator("td:nth-child(2)")).hasText("Nifty");
 
         page.locator(".dataTable > tbody").allInnerTexts().forEach(text -> System.out.println(text));
+
+        page.close();
+        browser.close();
+        playwright.close();
+
+
     }
 }
